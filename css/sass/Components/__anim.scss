@@ -1,0 +1,28 @@
+@keyframes fadein {
+    from {
+        opacity:0;
+        padding-top:10px;
+    }
+    to {
+        padding-top:0px;
+        opacity:1;
+    }
+}
+
+@keyframes fadeinheart {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@mixin fadeheart {
+    animation-delay: 0s;
+    animation: fadeinheart 1s;
+}
+
+@mixin fade {
+    animation : fadein 1s;
+}
