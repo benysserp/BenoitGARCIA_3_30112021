@@ -1,3 +1,4 @@
+/* fondu affichage plats */
 @keyframes fadein {
   0% {
     margin-top: 20px;
@@ -242,6 +243,12 @@ header img {
   color: #7e7e7e;
   margin-left: 40px;
   margin-right: 20px;
+}
+.etapes-card .desktop {
+  display: none;
+}
+.etapes-card .mobile {
+  display: unset;
 }
 
 .restaurants {
@@ -548,6 +555,148 @@ footer h5 {
 }
 .footer-liens i {
   width: 25px;
+}
+
+@media screen and (min-width: 992px) {
+  body {
+    background-color: #FFF;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: #000;
+    width: 992px;
+    border-left: 2px solid #f6f6f6;
+    border-right: 2px solid #f6f6f6;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    position: relative;
+  }
+  header a {
+    margin-left: 20px;
+    position: absolute;
+    font-size: 25px;
+  }
+
+  .loading-spinner {
+    display: none;
+  }
+
+  .etapes {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+  }
+  .etapes h2 {
+    margin: 40px 0 40px 0;
+  }
+  .etapes-card {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 40px 10px 40px 10px;
+  }
+  .etapes-card-circle {
+    position: absolute;
+    margin: 0;
+    top: -15px;
+    left: 100px;
+  }
+  .etapes-card:hover {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 40px 10px 40px 10px;
+  }
+  .etapes i {
+    margin: 0;
+    font-size: 35px;
+  }
+  .etapes .desktop {
+    display: unset;
+  }
+  .etapes .mobile {
+    display: none;
+  }
+
+  .restaurants {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .restaurants-card {
+    width: 180px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transform: scale(1);
+    transition: all 200ms linear;
+  }
+  .restaurants-card img {
+    width: 100%;
+    height: 100px;
+  }
+  .restaurants-card:hover {
+    transform: scale(1.2);
+  }
+  .restaurants-card-desc-txt {
+    font-size: 12px;
+  }
+  .restaurants-card-desc-txt a {
+    font-size: 14px;
+  }
+  .restaurants-card-desc-txt a:hover {
+    font-size: 14px;
+  }
+  .restaurants-card-desc-follow {
+    margin-right: 0;
+    margin-left: 10px;
+  }
+
+  .nouveau {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .nouveau p {
+    background-color: #99E2D0;
+    color: #278870;
+    margin: 1em 0 0 1em;
+    padding: 2px 4px 2px 4px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 3px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+  .menu img {
+    width: 992px;
+  }
+
+  .commander button {
+    transform: scale(1);
+    transition: all 200ms linear;
+  }
+  .commander button:hover {
+    transform: scale(1.1);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -135,6 +135,12 @@ header {
             margin-left:40px;
             margin-right:20px;
         }
+        .desktop {
+            display: none;
+        }
+        .mobile {
+            display: unset;
+        }
     }
 }
 
@@ -431,5 +437,145 @@ footer {
     }
     i {
         width: 25px;
+    }
+}
+
+@media screen and (min-width: 992px)
+{
+    body {
+        background-color: #FFF;
+        margin: 0;
+        @include font-def;
+        width: 992px;
+        border-left:2px solid $grey-light;
+        border-right:2px solid $grey-light;
+        margin-left:auto;
+        margin-right: auto;
+        @include flex-column;
+    }
+
+    header {
+        position:relative;
+        a {
+            margin-left:20px;
+            position:absolute;
+            font-size:25px;
+        }
+    }
+
+    .loading-spinner {
+        display: none;
+    }
+
+    .etapes {
+        @include flex-row;
+        margin: 0;
+        padding: 0;
+        h2 {
+            margin: 40px 0 40px 0;
+        }
+        &-card {
+            position:relative;
+            width: 200px;
+            height: 150px;
+            padding:20px;
+            @include flex-column;
+            justify-content: center;
+            &-circle {
+                position:absolute;
+                margin:0;
+                top:-15px; left:100px;
+            }
+            margin:40px 10px 40px 10px;
+            &:hover {
+            position:relative;
+            width: 200px;
+            height: 150px;
+            padding:20px;
+            @include flex-column;
+            justify-content: center;
+            margin:40px 10px 40px 10px;
+            }
+        }
+        i {
+            margin:0;
+            font-size:35px;
+        }
+        .desktop {
+            display:unset;
+        }
+        .mobile {
+            display: none;
+        }
+    }
+
+    .restaurants {
+        padding-top:30px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        &-card {
+            width: 180px;
+            position:relative;
+            @include flex-column;
+            img {
+                width: 100%;
+                height: 100px;
+            }
+            transform: scale(1);
+            transition: all 200ms linear;
+            &:hover {
+                transform : scale(1.2);
+            }
+            &-desc {
+                &-txt {
+                    font-size:12px;
+                    a {
+                        font-size:14px;
+                        &:hover {
+                            font-size:14px;
+                        }
+                    }
+                }
+                &-follow {
+                    margin-right: 0;
+                    margin-left:10px;
+                }
+            }
+        }
+    }
+
+    .nouveau {
+        position: absolute;
+        @include flex-row;
+        justify-content: flex-start;
+        width: 100%;
+        p {
+            background-color: $color-third;
+            color: darken($color-third, 40%);
+            margin:1em 0 0 1em;
+            padding:2px 4px 2px 4px;
+            font-size:12px;
+            font-weight: 600;
+            border-radius: 3px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+    }
+
+    .menu {
+        img {
+            width: 992px;
+        }
+    }
+
+    .commander {
+        button {
+            transform: scale(1);
+            transition: all 200ms linear;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
     }
 }

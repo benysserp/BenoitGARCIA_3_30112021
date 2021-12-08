@@ -15,3 +15,21 @@
     height:70px;
     margin:0px 30px 30px 30px;
 }
+
+@mixin card-accueil-desktop {
+    align-items:center;
+    background-color:#f5edff;
+    box-shadow: rgba(134, 134, 134, 0.2) 0px 7px 29px 0px;
+    border-radius:10px;
+    height:70px;
+    margin:30px 30px 30px 30px;
+}
+
+@mixin card-accueil-hover-desktop {
+    align-items:center;
+    background-color:#f5edff;
+    box-shadow: rgba(134, 134, 134, 0.2) 0px 7px 29px 0px;
+    border-radius:10px;
+    height:70px;
+    margin:30px 30px 30px 30px;
+}
