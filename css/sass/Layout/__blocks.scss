@@ -1,7 +1,7 @@
 @mixin card-accueil {
     align-items:center;
     background-color:#f6f6f6;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(209, 209, 209, 0.2) 0px 7px 29px 0px;
     border-radius:10px;
     height:70px;
     margin:0px 30px 30px 30px;
@@ -10,7 +10,7 @@
 @mixin card-accueil-hover {
     align-items:center;
     background-color:#f5edff;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(134, 134, 134, 0.2) 0px 7px 29px 0px;
     border-radius:10px;
     height:70px;
     margin:0px 30px 30px 30px;

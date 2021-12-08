@@ -194,7 +194,7 @@ header {
                     }
                     .activ {
                         display: unset;
-                        @include fadeheart;
+                        @include fadeheart-follow;
                     }
                 }
                 .innactiv {
@@ -204,7 +204,9 @@ header {
                 .activ {
                     display: none;
                     font-size:22px;
-                    color: $color-secondary;
+                    background: $color-deg;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
                 }
             }
         }
@@ -252,13 +254,14 @@ main {
     }
 
     &-like {
+        @include flex-row;
         &:hover {
             .innactiv {
                 display:none;
             }
             .activ {
                 display: unset;
-                @include fadeheart;
+                @include fadeheart-like;
             }
         }
         .innactiv {
@@ -268,7 +271,6 @@ main {
         .activ {
             display: none;
             font-size:22px;
-            color: $color-secondary;
         }
     }
     &-contenu {

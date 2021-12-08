@@ -9,11 +9,33 @@
   }
 }
 @keyframes fadeinheart {
-  from {
+  0% {
+    transform: scaleY(0);
     opacity: 0;
   }
-  to {
+  100% {
+    transform: scaleY(1);
     opacity: 1;
+  }
+}
+@keyframes fadeinlike {
+  0% {
+    background: #d76cda;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    transform-origin: bottom;
+    transform: scaleY(0);
+  }
+  60% {
+    background: #ad5edb;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background: linear-gradient(150deg, #e470da 0%, #9f5adc 50%, #9f5adc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 @keyframes spinner {
@@ -31,8 +53,13 @@
   80% {
     opacity: 1;
   }
+  99% {
+    opacity: 0;
+    transform: scale(1);
+  }
   100% {
     opacity: 0;
+    transform: scale(0);
   }
 }
 body {
@@ -178,7 +205,7 @@ header img {
   flex-direction: row;
   align-items: center;
   background-color: #f6f6f6;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(209, 209, 209, 0.2) 0px 7px 29px 0px;
   border-radius: 10px;
   height: 70px;
   margin: 0px 30px 30px 30px;
@@ -186,7 +213,7 @@ header img {
 .etapes-card:hover {
   align-items: center;
   background-color: #f5edff;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(134, 134, 134, 0.2) 0px 7px 29px 0px;
   border-radius: 10px;
   height: 70px;
   margin: 0px 30px 30px 30px;
@@ -281,7 +308,7 @@ header img {
 .restaurants-card-desc-follow:hover .activ {
   display: unset;
   animation-delay: 0s;
-  animation: fadeinheart 1s;
+  animation: fadeinheart 400ms ease-in both;
 }
 .restaurants-card-desc-follow .innactiv {
   font-size: 22px;
@@ -290,7 +317,9 @@ header img {
 .restaurants-card-desc-follow .activ {
   display: none;
   font-size: 22px;
-  color: #FF79DA;
+  background: linear-gradient(150deg, #e470da 0%, #9f5adc 50%, #9f5adc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .nouveau {
@@ -335,13 +364,16 @@ main {
   width: 40px;
   height: 2px;
 }
+.menu-like {
+  display: flex;
+  flex-direction: row;
+}
 .menu-like:hover .innactiv {
   display: none;
 }
 .menu-like:hover .activ {
   display: unset;
-  animation-delay: 0s;
-  animation: fadeinheart 1s;
+  animation: fadeinlike 400ms ease-in both;
 }
 .menu-like .innactiv {
   font-size: 22px;
@@ -350,7 +382,6 @@ main {
 .menu-like .activ {
   display: none;
   font-size: 22px;
-  color: #FF79DA;
 }
 .menu-contenu {
   border-top-right-radius: 20px;
