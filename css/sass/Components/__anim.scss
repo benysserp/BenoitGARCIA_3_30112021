@@ -1,7 +1,7 @@
 @keyframes fadein {
     from {
+        padding-top:3px;
         opacity:0;
-        padding-top:10px;
     }
     to {
         padding-top:0px;
@@ -45,5 +45,5 @@
 }
 
 @mixin fade {
-    animation : fadein 1s;
+    animation : fadein 1s both;
 }
