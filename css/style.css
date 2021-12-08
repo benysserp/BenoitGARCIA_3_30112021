@@ -689,6 +689,16 @@ footer h5 {
   .menu img {
     width: 992px;
   }
+  .menu-desc h3 {
+    font-size: 18px;
+  }
+  .menu-desc p {
+    font-size: 14px;
+  }
+  .menu-prix {
+    font-size: 16px;
+    font-weight: 600;
+  }
 
   .commander button {
     transform: scale(1);

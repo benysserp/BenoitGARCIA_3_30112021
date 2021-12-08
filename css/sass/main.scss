@@ -567,6 +567,18 @@ footer {
         img {
             width: 992px;
         }
+        &-desc {
+            h3 {
+                font-size:18px;
+            }
+            p {
+                font-size:14px;
+            }
+        }
+        &-prix {
+            font-size:16px;
+            font-weight: 600;
+        }
     }
 
     .commander {
