@@ -141,6 +141,9 @@ header {
         .mobile {
             display: unset;
         }
+        .tablet {
+            display: none;
+        }
     }
 }
 
@@ -446,6 +449,8 @@ footer {
     }
 }
 
+/* DESKTOP */
+
 @media screen and (min-width: 992px)
 {
     body {
@@ -511,6 +516,9 @@ footer {
             display:unset;
         }
         .mobile {
+            display: none;
+        }
+        .tablet {
             display: none;
         }
     }
@@ -595,5 +603,26 @@ footer {
                 transform: scale(1.1);
             }
         }
+    }
+}
+
+/* TABLET */
+
+@media screen and (min-width: 768px) and (max-width:992px) {
+
+    .etapes-card {
+        .mobile {
+            display:none;
+        }
+        .desktop {
+            display: none;
+        }
+        .tablet {
+            display: unset;
+        }
+    }
+
+    .loading-spinner {
+        display: unset;
     }
 }
