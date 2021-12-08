@@ -1,46 +1,4 @@
-@keyframes fadein {
-    from {
-        padding-top:3px;
-        opacity:0;
-    }
-    to {
-        padding-top:0px;
-        opacity:1;
-    }
-}
-
-@keyframes fadeinheart {
-    0% {
-        transform: scaleY(0);
-        opacity: 0;
-    }
-    100% {
-        transform: scaleY(1);
-        opacity: 1;
-    }
-}
-
-@keyframes fadeinlike {
-    0% {
-        background: #d76cda;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        opacity: 0;
-        transform-origin: bottom;
-        transform: scaleY(0);
-    }
-    60% {
-        background: #ad5edb;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    100% {
-        background: $color-deg;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-}
-
+/* rotation spinner loadgin */
 @keyframes spinner {
     0% { 
         transform: rotate(0deg);
@@ -49,6 +7,8 @@
         transform: rotate(360deg);
      }
 }
+
+/* animation fond spinner loadgin */
 
 @keyframes bg-spinner {
     0% {
@@ -67,6 +27,38 @@
     }
 }
 
+/* effet remplissage coeur follow */
+
+@keyframes remplissage {
+    0% {
+        position:relative;
+        opacity: 0;
+        bottom:-2em;
+        background: $color-primary;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    30% {
+        background: $color-primary;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    50% {
+        background: $color-secondary;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0.8;
+        bottom:0em;
+    }
+    100% {
+        position: relative;
+        opacity: 1;
+        background: $color-deg;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
 @mixin fadeheart-follow {
     animation-delay: 0s;
     animation: fadeinheart 400ms ease-in both;
@@ -78,4 +70,8 @@
 
 @mixin fade {
     animation : fadein 1s both;
+}
+
+@mixin follow  {
+    animation : remplissage 2s both;
 }

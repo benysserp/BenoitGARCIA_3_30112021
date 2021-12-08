@@ -27,13 +27,12 @@ body {
         opacity: 0.6;
     }
     &::after {
-    box-sizing: border-box;
     z-index: 10002;
     content: "";
     position: absolute;
     top: 50%;
     left: 50%;
-    margin: -25px 0 0 -25px;
+    margin-left:-25px;
     border: 5px solid #f3f3f3;
     border-bottom: 5px solid $color-primary;
     border-top: 5px solid $color-secondary;
@@ -188,13 +187,16 @@ header {
             &-follow {
                 @include flex-row;
                 margin-right: 15px;
+                width: 24px;
+                height: 24px;
+                overflow: hidden;
                 &:hover {
                     .innactiv {
                         display:none;
                     }
                     .activ {
                         display: unset;
-                        @include fadeheart-follow;
+                        @include follow;
                     }
                 }
                 .innactiv {
@@ -204,9 +206,6 @@ header {
                 .activ {
                     display: none;
                     font-size:22px;
-                    background: $color-deg;
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
                 }
             }
         }
@@ -255,13 +254,16 @@ main {
 
     &-like {
         @include flex-row;
+        width: 24px;
+        height: 24px;
+        overflow: hidden;
         &:hover {
             .innactiv {
                 display:none;
             }
             .activ {
                 display: unset;
-                @include fadeheart-like;
+                @include follow;
             }
         }
         .innactiv {
