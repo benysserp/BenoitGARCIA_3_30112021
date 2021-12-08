@@ -10,23 +10,23 @@ body {
     @include font-def;
 }
 
-.custom-loading-spinner {
-    cursor: progress;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-.custom-loading-spinner::before {
-    content: "";
+.loading-spinner {
     position: absolute;
     width: 100%;
     height: 100%;
     z-index: 10001;
-    overflow: hidden;
-    background: $black;
-    opacity: 0.6;
-}
-.custom-loading-spinner::after {
+    animation: bg-spinner 2s 1s linear both running;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 10001;
+        overflow: hidden;
+        background: $black;
+        opacity: 0.6;
+    }
+    &::after {
     box-sizing: border-box;
     z-index: 10002;
     content: "";
@@ -40,7 +40,8 @@ body {
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    animation: custom-loading 1s linear infinite;
+    animation: spinner 1s linear infinite;
+    }
 }
 
 header {
@@ -406,5 +407,112 @@ footer {
     }
     i {
         width: 25px;
+    }
+}
+
+/* EXERCICES */
+
+.exo-contenu {
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    align-items: center;
+}
+
+$vert : #A2EEBF;
+$rose : #DC2443;
+
+.btn {
+    padding: 10px;
+    margin-bottom: 50px;
+    background-color: $rose;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #FFF;
+    &:hover {
+        & + .charg-bord {
+           & > .charg-barre {
+               transform: scaleX(1);
+               animation-name: progress;
+               animation-duration: 1000ms;
+           }
+        }
+    }
+}
+
+.charg-bord {
+    width: 300px;
+    height: 25px;
+    border: 5px solid $vert;
+    margin-bottom: 20px;
+}
+
+$prog-bar-dur: 1000ms;
+$prog-bar-delay: 150ms;
+$cat-delay: $prog-bar-dur + $prog-bar-delay;
+
+.charg-barre {
+    width: 100%;
+    height: 100%;
+    background-color: $rose;
+    transform-origin: left;
+    animation: progress $prog-bar-dur $prog-bar-delay both;
+}
+
+@keyframes progress {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+.cat {
+    width: 50vw;
+    height: 30vw;
+    position: absolute;
+    overflow: hidden;
+    background-size: cover;
+    background-position: -20%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: .1rem;
+    font-size: 4vw;
+    font-weight: 900;
+    color: white;
+    background-image: url('https://user.oc-static.com/upload/2019/08/24/15666772486521_Capture%20d%E2%80%99e%CC%81cran%202019-08-24%20a%CC%80%2018.48.50.jpg');
+    animation: cat 0ms $cat-delay both;
+}
+
+@keyframes cat{
+    0% {
+        transform: translateX(-9999px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.spin {
+    background-color: #15DEA5;
+    width: 30vh;
+    height: 30vh;
+    animation: spin 3s linear infinite paused;
+    &:focus {
+        animation-play-state: running;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
     }
 }

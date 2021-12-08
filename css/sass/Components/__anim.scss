@@ -18,9 +18,25 @@
     }
 }
 
-@keyframes custom-loading {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+@keyframes spinner {
+    0% { 
+        transform: rotate(0deg);
+     }
+    100% { 
+        transform: rotate(360deg);
+     }
+}
+
+@keyframes bg-spinner {
+    0% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 @mixin fadeheart {
