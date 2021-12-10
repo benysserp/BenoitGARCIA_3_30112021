@@ -452,7 +452,7 @@ footer {
 @media screen and (min-width: 992px)
 {
     body {
-        background: $color-deg;
+        background: $grey-darker;
         margin: 0;
         @include font-def;
         width: 90%;

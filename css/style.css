@@ -536,7 +536,7 @@ footer h5 {
 /* DESKTOP */
 @media screen and (min-width: 992px) {
   body {
-    background: linear-gradient(150deg, #e470da 0%, #9f5adc 50%, #9f5adc 100%);
+    background: #353535;
     margin: 0;
     font-family: "Roboto", sans-serif;
     font-size: 14px;
