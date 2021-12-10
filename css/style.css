@@ -156,11 +156,21 @@ header img {
   background: #e470da;
   background: linear-gradient(150deg, #e470da 0%, #9f5adc 50%, #9f5adc 100%);
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .info-desc button:hover {
-  opacity: 0.5;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 17px 22px 17px 22px;
+  margin: 40px 0px 0px 0px;
+  border: 0px;
+  border-radius: 25px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #FFF;
+  background: #f5acef;
+  background: linear-gradient(150deg, #f5acef 0%, #c868db 50%, #bb7ff0 100%);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 0px 0px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .etapes {
@@ -499,11 +509,12 @@ main {
   color: #FFF;
   background: #e470da;
   background: linear-gradient(150deg, #e470da 0%, #9f5adc 50%, #9f5adc 100%);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .commander button:hover {
-  opacity: 0.8;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background: #f5acef;
+  background: linear-gradient(150deg, #f5acef 0%, #c868db 50%, #bb7ff0 100%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 footer {
@@ -677,14 +688,6 @@ footer h5 {
   .menu-prix {
     font-size: 16px;
     font-weight: 600;
-  }
-
-  .commander button {
-    transform: scale(1);
-    transition: all 200ms ease-in;
-  }
-  .commander button:hover {
-    transform: scale(1.05);
   }
 }
 /* TABLET */

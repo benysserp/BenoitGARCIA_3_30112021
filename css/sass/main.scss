@@ -93,10 +93,10 @@ header {
         }
         button {
             @include degrade;
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
             &:hover {
-                opacity: 0.5;
-                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                @include degrade-hover;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
             }
         }
     }
@@ -414,10 +414,11 @@ main {
         color: $white;
         background: rgb(228,112,218);
         background: linear-gradient(150deg, rgba(228,112,218,1) 0%, rgba(159,90,220,1) 50%, rgba(159,90,220,1) 100%);
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         &:hover {
-            opacity: 0.8;
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            background: rgb(245,172,239,1);
+            background: linear-gradient(150deg, rgba(245,172,239,1) 0%, rgba(200,104,219,1) 50%, rgba(187,127,240,1) 100%);
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
         }
     }
 }
@@ -592,15 +593,7 @@ footer {
         }
     }
 
-    .commander {
-        button {
-            transform: scale(1);
-            transition: all 200ms ease-in;
-            &:hover {
-                transform: scale(1.05);
-            }
-        }
-    }
+    
 }
 
 /* TABLET */
