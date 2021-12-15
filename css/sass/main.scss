@@ -333,6 +333,7 @@ main {
         &:hover {
             .menu-check {
                 width: 100px;
+                transition-delay: 300ms;
                 transform: scaleX(1);
                 background-color: $color-third;
                 border-top-right-radius: 10px;
@@ -341,7 +342,22 @@ main {
                     transform: rotate(0deg);
                 }
             }
+            .menu-prix {
+                transform: translateX(-10px);
+            }
         }
+    }
+
+    &-prix {
+        padding:0 8px 8px 8px;
+        margin-right:0px;
+        margin-left:auto;
+        @include flex-row;
+        align-items: flex-end;
+        font-weight: 600;
+        font-size:14px;
+        transform: translateX(10px);
+        transition: all 300ms;
     }
 
     &-check {
@@ -385,16 +401,6 @@ main {
             overflow: hidden;
             text-overflow: ellipsis;
         }
-    }
-
-    &-prix {
-        padding:0 8px 8px 8px;
-        margin-right:0px;
-        margin-left:auto;
-        @include flex-row;
-        align-items: flex-end;
-        font-weight: 600;
-        font-size:14px;
     }
 
 }

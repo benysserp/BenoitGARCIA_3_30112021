@@ -431,6 +431,7 @@ main {
 }
 .menu-card:hover .menu-check {
   width: 100px;
+  transition-delay: 300ms;
   transform: scaleX(1);
   background-color: #99E2D0;
   border-top-right-radius: 10px;
@@ -438,6 +439,21 @@ main {
 }
 .menu-card:hover .menu-check i {
   transform: rotate(0deg);
+}
+.menu-card:hover .menu-prix {
+  transform: translateX(-10px);
+}
+.menu-prix {
+  padding: 0 8px 8px 8px;
+  margin-right: 0px;
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  font-weight: 600;
+  font-size: 14px;
+  transform: translateX(10px);
+  transition: all 300ms;
 }
 .menu-check {
   display: flex;
@@ -480,16 +496,6 @@ main {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-.menu-prix {
-  padding: 0 8px 8px 8px;
-  margin-right: 0px;
-  margin-left: auto;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  font-weight: 600;
-  font-size: 14px;
 }
 
 .commander {
