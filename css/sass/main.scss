@@ -333,18 +333,16 @@ main {
         &:hover {
             .menu-check {
                 width: 100px;
-                transition-delay: 300ms;
                 transform: scaleX(1);
                 background-color: $color-third;
                 border-top-right-radius: 10px;
                 border-bottom-right-radius: 10px;
                 i {
-                    transition-delay: 300ms;
                     transform: rotate(0deg);
                 }
             }
             .menu-prix {
-                transform: translateX(-10px);
+                transform: translateX(-5px);
             }
         }
     }
