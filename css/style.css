@@ -438,22 +438,11 @@ main {
   border-bottom-right-radius: 10px;
 }
 .menu-card:hover .menu-check i {
+  transition-delay: 300ms;
   transform: rotate(0deg);
 }
 .menu-card:hover .menu-prix {
   transform: translateX(-10px);
-}
-.menu-prix {
-  padding: 0 8px 8px 8px;
-  margin-right: 0px;
-  margin-left: auto;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  font-weight: 600;
-  font-size: 14px;
-  transform: translateX(10px);
-  transition: all 300ms;
 }
 .menu-check {
   display: flex;
@@ -471,6 +460,18 @@ main {
   color: #FFF;
   margin: 0px;
   padding: 0px;
+}
+.menu-prix {
+  padding: 0 8px 8px 8px;
+  margin-right: 0px;
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  font-weight: 600;
+  font-size: 14px;
+  transform: translateX(10px);
+  transition: all 300ms;
 }
 .menu-desc {
   width: 100%;
